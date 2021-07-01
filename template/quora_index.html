@@ -1,0 +1,73 @@
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+h1 {
+
+  float: center;
+  display: block;
+  background-color: #E0A409;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  height:100px;
+}
+
+/* Style the content */
+
+
+.review {
+  background-color: #E0A409;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  margin:auto
+}
+
+textarea {
+
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align:center;
+}
+
+</style>
+
+<body>
+   <h1>SENTIMENT ANALYSIS OF AMAZON PRODUCT REVIEWS</h1>
+   <center><img src="https://brandlox.com/wp-content/uploads/2018/04/AMAZON-1200x537-768x344.png"/><center>	
+<div class = "review">
+  <form action="/predict" method="POST" target="_blank">
+ <textarea name="review_text" placeholder="Enter the review whose sentiment is to be checked..." rows="10" cols="15"></textarea>
+    <input type="submit" value="SUBMIT">
+  </form>
+
+</div>
+
+
+</body>
+</html>
