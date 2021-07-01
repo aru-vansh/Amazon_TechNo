@@ -1,0 +1,59 @@
+ <html>
+
+ <style>
+ h1 {
+  width:100%:
+  float: center;
+  display: block;
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  height:100px;
+}
+
+img {
+   background-color: #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+
+}
+progress {
+ background-color: #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  }
+
+progress {
+  text-align: center;
+}
+progress:after {
+  content: {{test}};
+}
+
+ </style>
+
+ <body>
+ 	 {% if prediction == "NEGATIVE" %}
+
+	     <h1> THIS IS NOT A POSITIVE REVIEW </h1>
+	     <img src="https://www.pngitem.com/pimgs/m/7-79370_thumbs-down-circle-clip-arts-thumbs-down-icon.png" alt="THUMBS DOWN" width=350>
+	    <progress value= {{prob}} max="100">
+
+
+
+	  {% else %}
+		<h1> THIS IS A POSITIVE REVIEW   </h1>
+		<img src = "https://lh3.googleusercontent.com/proxy/oRPRPFtBvxv0d8GuEcqG5tH0jhhppYPmLoofVtPBu5IOcroP1B0WTULn5sY_mFPW2akIpsb7QCjnQeCg-ElZffOjHBB_P3e8CpB0YsHeB9aZaE00SJ9ni-6Ip0VCuaB9wJzIBZfpJoM" alt = "THUMBS UP" width = 440 height=250>
+		<br>
+		<br>
+		<progress value= {{prob}} max="100">
+
+	{% endif %}
+ </body>
+ </html>
